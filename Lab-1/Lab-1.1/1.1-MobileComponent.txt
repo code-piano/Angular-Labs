@@ -1,0 +1,13 @@
+//MOBILE COMPONENT CLASS//
+
+export class MobileComponent{
+
+  constructor(private mobileId: number, private mobileName: string, private mobileCost: number){
+      this.mobileId=mobileId;
+      this.mobileName=mobileName;
+      this.mobileCost=mobileCost;
+  }
+  printMobileDetails(){
+      return "Mobile id is: "+this.mobileId+"Mobile name is: "+this.mobileName+"Mobile cost is: "+this.mobileCost;
+  }
+  }

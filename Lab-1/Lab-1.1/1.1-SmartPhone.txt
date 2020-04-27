@@ -1,0 +1,28 @@
+//SMART PHONE CLASS//
+
+import{MobileComponent}from"./MobileComponent";
+
+export class smartPhone extends MobileComponent{
+    private mobileType: string
+
+    constructor(mobileId: number, mobileName: string, mobileCost: number, private mtype: string){
+        super(mobileId, mobileName, mobileCost);
+        this.mobileType=mtype;
+    }
+
+    printMobileInfo(){
+        return this.printMobileDetails()+"Mobile type is: "+this.mtype;
+    }
+    printMobileDetails() {
+        throw new Error("Method not implemented.");
+    }
+
+}
+let smartmobiles: smartPhone[]=[
+    new smartPhone(601,"OnePlus 5",24500,"SmartPhone"),
+    new smartPhone(602,"OnePlus 5T",30000,"SmartPhone"),
+    new smartPhone(603,"OnePlus 6",35000,"SmartPhone")
+]
+for(let i=0;i < smartmobiles.length;i++){
+    console.log(smartmobiles[i].printMobileInfo());
+}

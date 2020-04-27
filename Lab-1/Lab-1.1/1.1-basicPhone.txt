@@ -1,0 +1,26 @@
+//BASIC PHONE CLASS//
+
+import {MobileComponent} from "./MobileComponent";
+
+export class BasicPhone extends MobileComponent{
+    private mobileType: string
+constructor(mobileId: number, mobileName: string, mobileCost: number, private mtype: string){
+    super(mobileId,mobileName,mobileCost);
+    this.mobileType=mtype;
+}
+printMobileInfo():string{
+    return this.printMobileDetails()+"Mobile type is: "+this.mtype;
+}
+    printMobileDetails() {
+        throw new Error("Method not implemented.");
+    }
+}
+
+let basicmobiles:BasicPhone[]=[
+    new BasicPhone(601,"OnePlus5",24500,"BasicPhone"),
+    new BasicPhone(602,"OnePlus5T",30000,"BasicPhone"),
+    new BasicPhone(603,"OnePlus6",35000,"BasicPhone"),
+]
+for(let i=0;i<basicmobiles.length;i++){
+    console.log(basicmobiles[i].printMobileInfo());
+}
