@@ -1,0 +1,11 @@
+export class Course{
+  constructor(private ProdID:number,private ProdName:string,private Prod_Cateogry:string,private email:string,private Mob Number: string)
+  {
+    this.ProdID=ProdID;
+    this.ProdName=ProdName;
+    this.Prod_Cateogry=Prod_Cateogry;
+    this.email=email;
+    this.phone=phone;
+  }
+
+}
